@@ -190,7 +190,7 @@
         _shared.dist = _shared.pullMoveY - _shared.pullStartY;
       }
 
-      if (_shared.dist > 0) {
+      if (_shared.dist > 0 && e.cancelable) {
         e.preventDefault();
 
         _el.ptrElement.style[_el.cssProp] = (_shared.distResisted) + "px";
